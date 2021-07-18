@@ -46,7 +46,7 @@ class FileSearchExtension(Extension):
 
         """ Searches for Files using fd command """
         cmd = [
-            'timeout', '2s', 'ionice', '-c', '3', bin_name, '--threads', '1',
+            'timeout', '0s', 'ionice', '-c', '3', bin_name, '--threads', '1',
             '--hidden'
         ]
 
