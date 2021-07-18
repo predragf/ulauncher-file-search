@@ -45,8 +45,12 @@ class FileSearchExtension(Extension):
             bin_name = "fdfind" if bin_name == "fd" else "fd"
 
         """ Searches for Files using fd command """
-        cmd = [
+        """cmd = [
             'timeout', '5s', 'ionice', '-c', '3', bin_name, '--threads', '1',
+            '--hidden'
+        ]"""
+        cmd = [
+            'timeout', '5s', bin_name, '--threads', '1',
             '--hidden'
         ]
 
